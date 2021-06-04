@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace AplOkien
 {
@@ -12,6 +8,7 @@ namespace AplOkien
         public string Nazwisko { get; set; }
         public int NrIndeksu { get; set; }
         public string Wydzial { get; set; }
+        public List<Grade> Oceny { get;}
 
         public Student(string imie, string nazwisko, int nrIndeksu, string wydzial)
         {
@@ -19,7 +16,7 @@ namespace AplOkien
             Nazwisko = nazwisko;
             NrIndeksu = nrIndeksu;
             Wydzial = wydzial;
-
+            Oceny = new List<Grade>();
         }
 
         public Student()

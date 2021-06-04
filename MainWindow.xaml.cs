@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace AplOkien
 {
@@ -59,6 +49,43 @@ namespace AplOkien
             if (dgStudent.SelectedItem is Student)
                 ListaStudentow.Remove((Student)dgStudent.SelectedItem);
             dgStudent.Items.Refresh();
+        }
+
+        private void bAddSchGrades_Click(object sender, RoutedEventArgs e)
+        {
+            var student = dgStudent.SelectedItem as Student;
+            if (student == null)
+            {
+                return;
+            }
+            var dialog = new GradeWindow(student);
+            dialog.ShowDialog();
+
+        }
+
+        private void bSchGrades_Click(object sender, RoutedEventArgs e)
+        {
+            var student = dgStudent.SelectedItem as Student;
+            if (student == null)
+            {
+                return;
+            }
+            var dialog = new Grades(student);
+            dialog.ShowDialog();
+        }
+
+        private void bEditStudent_Click(object sender, RoutedEventArgs e)
+        {
+            var student = dgStudent.SelectedItem as Student;
+            if (student == null)
+            {
+                return;
+            }
+            var dialog = new StudentWindow(student);
+            if (dialog.ShowDialog() == true)
+            {
+                dgStudent.Items.Refresh();
+            }
         }
     }
 }
