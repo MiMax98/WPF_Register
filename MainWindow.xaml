@@ -22,12 +22,25 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Button x:Name="b_AddStudent" Content="Add Student" Grid.Column="1" HorizontalAlignment="Stretch"  VerticalAlignment="Center" Click="b_AddStudent_Click" Margin="20,0,20,0" Padding="1,5,1,5"/>
         <Button x:Name="b_RemoveStudent" Content="Remove Student" Grid.Column="2" HorizontalAlignment="Stretch"  VerticalAlignment="Center" Click="b_RemoveStudent_Click" Margin="20,0,20,0" Padding="1,5,1,5"/>
         <Button x:Name="bEditStudent" Content="Edit Student" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="20,0,20,0" Padding="1,5,1,5" Click="bEditStudent_Click"/>
         <Button x:Name="bAddSchGrades" Content="Add school grades" Grid.Column="4" HorizontalAlignment="Stretch"  VerticalAlignment="Center" Margin="20,0,20,0" Padding="1,5,1,5" Click="bAddSchGrades_Click"/>
         <Button x:Name="bSchGrades" Content="School grades" Grid.Column="5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="20,0,20,0" Padding="1,5,1,5" Click="bSchGrades_Click"/>
-        <DataGrid x:Name="dgStudent" Grid.Row="1" Grid.ColumnSpan="5" Grid.Column="1" Margin="0,0,0,20"/>
+        <Button x:Name="b_SaveToFile" Content="Save to file" Grid.Column="1" Padding="1,5,1,5" VerticalAlignment="Top" Click="b_SaveToFile_Click" Grid.Row="1" />
+        <Button x:Name="bLoadFromFile" Content="Load from file" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="bLoadFromFile_Click" Grid.Row="1" Margin="0,50,0,0"/>
+        <Button x:Name="b_SaveToFileDynamic" Content="Save to file dynamic" Grid.Column="2" Padding="1,5,1,5" VerticalAlignment="Top" Grid.Row="1" Click="b_SaveToFileDynamic_Click" />
+        <Button x:Name="bLoadFromFileDynamic" Content="Load from file dynamic" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Row="1" Margin="0,50,0,0" Click="bLoadFromFileDynamic_Click"/>
+        <Button x:Name="bLoadFromFileDynamicNew" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Row="1" Margin="0,90,0,0" Click="bLoadFromFileDynamicNew_Click">
+            <TextBlock TextAlignment="Center" TextWrapping="Wrap" Text="Load from file dynamic with StreamEnumerable" HorizontalAlignment="Stretch"></TextBlock>
+        </Button>
+        <Button x:Name="b_SaveToXml" Content="Save to XML" Grid.Column="4" Padding="1,5,1,5" VerticalAlignment="Top" Grid.Row="1" Click="b_SaveToXml_Click"/>
+        <Button x:Name="bLoadFromXml" Content="Load from XML" Grid.Column="4" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Row="1" Margin="0,50,0,0" Click="bLoadFromXml_Click"/>
+        <DataGrid x:Name="dgStudent" Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="1" Margin="0,0,0,20"/>
+        <DataGrid x:Name="dgSamochod" Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="4" Margin="0,0,0,20"/>
+
+
     </Grid>
 </Window>

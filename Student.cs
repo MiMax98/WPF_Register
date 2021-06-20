@@ -8,7 +8,7 @@ namespace AplOkien
         public string Nazwisko { get; set; }
         public int NrIndeksu { get; set; }
         public string Wydzial { get; set; }
-        public List<Grade> Oceny { get;}
+        public List<Grade> Oceny { get; }
 
         public Student(string imie, string nazwisko, int nrIndeksu, string wydzial)
         {
